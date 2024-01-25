@@ -6,7 +6,7 @@ Copyright (c) 2024 Alan Uthoff*/
 #include <chrono>
 #include "TimerUesr.h"
 using namespace std::chrono_literals;
-constexpr std::chrono::milliseconds sleepDuration = 300ms;
+constexpr std::chrono::milliseconds sleepDuration = 200ms;
 int main() {
     TimerUser tUser(1000ms); //Timer user will print a message out ever second +- sleepDuration
     while (true)
