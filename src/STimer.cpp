@@ -55,9 +55,11 @@ void STimer::update()
     {
         const auto currentTime  = std::chrono::system_clock::now();
         const auto currentTimeMil = std::chrono::duration_cast<std::chrono::milliseconds>(currentTime.time_since_epoch());
-        if(m_interval.count() >= currentTimeMil.count() - m_startTime.count() )
+        if((currentTimeMil.count() - m_startTime.count() ) >= m_interval.count())
         {
             timeout();
+            m_startTime = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch());
+
         }
     }
 }
