@@ -13,14 +13,12 @@ public:
     STimer();
     ~STimer();
     fteng::signal<void()> timeout;
-    void start(int interval);
     void start(std::chrono::milliseconds interval);
     void start();
     void stop();
     void setInterval(std::chrono::milliseconds interval);
     bool isActive();
     static void updateAll();
-    static void regeisterTimer(STimer * timer);
 protected:
     void update();
     std::chrono::milliseconds m_startTime;

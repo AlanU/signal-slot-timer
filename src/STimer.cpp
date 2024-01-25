@@ -14,14 +14,6 @@ STimer::~STimer()
     m_timerToUpdate.erase(this);
 }
 
-void STimer::start(int interval)
-{
-    if(interval >= 0)
-    {
-        start(std::chrono::milliseconds(interval));
-    }
-}
-
 void STimer::start(std::chrono::milliseconds interval)
 {
     setInterval(interval);
