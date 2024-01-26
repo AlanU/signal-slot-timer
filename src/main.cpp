@@ -1,4 +1,4 @@
-/*MIT License
+/*Boost Software License - Version 1.0 - August 17th, 2003
 Copyright (c) 2024 Alan Uthoff*/
 #include <iostream>
 #include "STimer.h"
@@ -6,7 +6,7 @@ Copyright (c) 2024 Alan Uthoff*/
 #include <chrono>
 #include "TimerUesr.h"
 using namespace std::chrono_literals;
-constexpr std::chrono::milliseconds sleepDuration = 200ms;
+constexpr std::chrono::milliseconds sleepDuration = 500ms;
 int main() {
     TimerUser tUser(1000ms); //Timer user will print a message out ever second +- sleepDuration
     while (true)
